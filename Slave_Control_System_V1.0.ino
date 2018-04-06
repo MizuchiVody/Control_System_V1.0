@@ -69,38 +69,40 @@ void Potentiometer(int howMany)
     if (command == 'F'){
       M3.writeMicroseconds(Speed);
       Serial.println('F');
-      M4.writeMicroseconds(2000);
+      M4.writeMicroseconds(Speed);
     }
      if (command == 'f'){
-      M3.writeMicroseconds(1000);
+      M3.writeMicroseconds(Speed);
       Serial.println('f');
-      M4.writeMicroseconds(1000);
+      M4.writeMicroseconds(Speed);
     }
     if (command == 'B'){
-      M1.writeMicroseconds(2000);
-      M2.writeMicroseconds(2000);
+      M1.writeMicroseconds(Speed);
+      M2.writeMicroseconds(Speed);
     }
      if (command == 'b'){
-      M1.writeMicroseconds(1000);
-      M2.writeMicroseconds(1000);
+      M1.writeMicroseconds(Speed);
+      M2.writeMicroseconds(Speed);
     }
     if (command == 'L'){
       M1.writeMicroseconds(2000);
       M4.writeMicroseconds(2000);
     }
      if (command == 'l'){
-      M1.writeMicroseconds(1000);
-      M4.writeMicroseconds(1000);
+      M1.writeMicroseconds(Speed);
+      M4.writeMicroseconds(Speed);
     }
     if (command == 'R'){
-      M3.writeMicroseconds(2000);
-      M2.writeMicroseconds(2000);
+      M3.writeMicroseconds(Speed);
+      M2.writeMicroseconds(Speed
+      );
     }
      if (command == 'r'){
-      M3.writeMicroseconds(1000);
-      M2.writeMicroseconds(1000); 
+      M3.writeMicroseconds(Speed);
+      M2.writeMicroseconds(Speed); 
     }
   
   }
   }
+
 

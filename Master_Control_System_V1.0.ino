@@ -117,12 +117,12 @@ void loop() {
       Wire.beginTransmission(5);
       Wire.write('B');
       Wire.endTransmission();
-    }   
-    if(ps2x.ButtonReleased(PSB_PAD_DOWN)){
+    } else if(ps2x.ButtonReleased(PSB_PAD_DOWN)){
       Serial.print("DOWN held this hard: ");
       Serial.println(ps2x.Analog(PSAB_PAD_DOWN), DEC);
       Wire.beginTransmission(5);
       Wire.write('b');
+      Wire.write(0);
       Wire.endTransmission();
     }   
 
@@ -134,12 +134,12 @@ void loop() {
       Wire.beginTransmission(5);
       Wire.write('R');
       Wire.endTransmission();
-    }
-    if(ps2x.ButtonReleased(PSB_PAD_RIGHT)){
+    } else if(ps2x.ButtonReleased(PSB_PAD_RIGHT)){
       Serial.print("Right held this hard: ");
       Serial.println(ps2x.Analog(PSAB_PAD_RIGHT), DEC);
       Wire.beginTransmission(5);
       Wire.write('r');
+      Wire.write(0);
       Wire.endTransmission();
     }
 
@@ -151,12 +151,12 @@ void loop() {
       Wire.beginTransmission(5);
       Wire.write('L');
       Wire.endTransmission();
-    }
-     if(ps2x.ButtonReleased(PSB_PAD_LEFT)){
+    } else if(ps2x.ButtonReleased(PSB_PAD_LEFT)){
       Serial.print("LEFT held this hard: ");
       Serial.println(ps2x.Analog(PSAB_PAD_LEFT), DEC);
       Wire.beginTransmission(5);
       Wire.write('l');
+      Wire.write(0);
       Wire.endTransmission();
     }
 
@@ -181,7 +181,6 @@ void loop() {
     } else if(ps2x.ButtonReleased(PSB_L2)){
       Wire.beginTransmission(5);
       Wire.write('d');
-      digitalWrite(7,LOW);
       Wire.write(0);
       Wire.endTransmission();
     }
