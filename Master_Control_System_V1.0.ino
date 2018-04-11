@@ -81,6 +81,7 @@ void loop() {
     if (ps2x.ButtonPressed(PSB_START)){
       if (State == true){
       Wire.beginTransmission(5);
+      Serial.println("Startpressed");
       Wire.write('O');
       Wire.endTransmission();
       State = false;
@@ -161,6 +162,7 @@ void loop() {
     }
 
     if(ps2x.Button(PSB_R2)){
+      Serial.println("R2");
       Wire.beginTransmission(5);
       Wire.write('U');
       Wire.write(ps2x.Analog(PSB_R2));
@@ -173,6 +175,7 @@ void loop() {
     }
     
     if(ps2x.Button(PSB_L2)){
+      Serial.println("L2");
       Wire.beginTransmission(5);
       Wire.write('D');
       digitalWrite(7,HIGH);
