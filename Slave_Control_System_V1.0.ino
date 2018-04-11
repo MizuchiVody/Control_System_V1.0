@@ -105,4 +105,3 @@ void Potentiometer(int howMany)
   }
   }
 
-
